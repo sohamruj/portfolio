@@ -30,9 +30,7 @@
       "AWS",
       "Cost Explorer",
       "Terraform"
-    ],
-    "demo": "",
-    "code": ""
+    ]
   },
   {
     "title": "Container Migration Initiative",
@@ -41,8 +39,6 @@
       "Docker",
       "Kubernetes",
       "HA/DR"
-    ],
-    "demo": "",
-    "code": ""
+    ]
   }
 ]

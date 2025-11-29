@@ -1,10 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-  <defs>
-    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0" stop-color="#14b8a6"/>
-      <stop offset="1" stop-color="#a78bfa"/>
-    </linearGradient>
-  </defs>
-  <rect width="24" height="24" rx="5" fill="#0b1020"/>
-  <path d="M6 8h12v2H6zm2 4h8v2H8zm2 4h4v2h-4z" fill="url(#g)"/>
-</svg>
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><defs><radialGradient id='g' cx='50%' cy='50%' r='50%'><stop offset='0%' stop-color='#14b8a6'><animate attributeName='stop-color' values='#14b8a6;#22d3ee;#14b8a6' dur='6s' repeatCount='indefinite'/></stop><stop offset='100%' stop-color='#a78bfa'><animate attributeName='stop-color' values='#a78bfa;#5eead4;#a78bfa' dur='6s' repeatCount='indefinite'/></stop></radialGradient></defs><rect width='24' height='24' rx='6' fill='#0b1020'/><circle cx='12' cy='12' r='7' fill='url(#g)'><animate attributeName='r' values='6;7;6' dur='4s' repeatCount='indefinite'/></circle></svg>
