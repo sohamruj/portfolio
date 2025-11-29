@@ -1,0 +1,48 @@
+[
+  {
+    "title": "Hybrid Observability Platform",
+    "description": "Unified monitoring with Prometheus/Grafana, alerting & RCA playbooks for on\u2011prem + AWS workloads.",
+    "tags": [
+      "Prometheus",
+      "Grafana",
+      "AWS",
+      "On\u2011prem"
+    ],
+    "demo": "",
+    "code": ""
+  },
+  {
+    "title": "DevSecOps CI/CD Accelerator",
+    "description": "Jenkins/Azure DevOps pipeline with OWASP, SonarQube, Black Duck checks and container image signing.",
+    "tags": [
+      "Jenkins",
+      "Azure DevOps",
+      "DevSecOps",
+      "SonarQube"
+    ],
+    "demo": "",
+    "code": ""
+  },
+  {
+    "title": "Cloud Cost Optimizer",
+    "description": "Auto\u2011scaling, reserved instances planning, and cost explorer reports to reduce infra spend.",
+    "tags": [
+      "AWS",
+      "Cost Explorer",
+      "Terraform"
+    ],
+    "demo": "",
+    "code": ""
+  },
+  {
+    "title": "Container Migration Initiative",
+    "description": "Lift\u2011and\u2011shift legacy apps to Docker/Kubernetes with HA and disaster recovery patterns.",
+    "tags": [
+      "Docker",
+      "Kubernetes",
+      "HA/DR"
+    ],
+    "demo": "",
+    "code": ""
+  }
+]
