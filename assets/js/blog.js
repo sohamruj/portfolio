@@ -3,31 +3,27 @@
   const postEl = document.getElementById('blog-post');
 
   function mdToHtml(md){
-    // Very small markdown converter: headings, code blocks, bold/italic, links, lists, paragraphs
     const lines = md.split(/\r?\n/);
     let html = '';
-    let inCode = false; let codeBuf = [];
+    let inCode = false; let codeBuf = []; let codeLang = '';
     for (let line of lines){
       if (line.trim().startsWith('```')) {
-        if (!inCode){ inCode = true; codeBuf = []; }
-        else { inCode = false; html += `<pre><code>${escapeHtml(codeBuf.join('\n'))}</code></pre>`; }
+        const lang = line.trim().slice(3).toLowerCase();
+        if (!inCode){ inCode = true; codeBuf = []; codeLang = lang; }
+        else { inCode = false; const dl = codeLang || ''; html += `<pre class=\"code-block\" data-lang=\"${dl}\"><code class=\"lang-${dl}\">${escapeHtml(codeBuf.join('\n'))}</code></pre>`; codeLang=''; }
         continue;
       }
       if (inCode){ codeBuf.push(line); continue; }
-      // headings
       const m = line.match(/^(#{1,6})\s+(.*)$/);
       if (m){ const level = m[1].length; html += `<h${level}>${inline(line.replace(/^(#{1,6})\s+/, ''))}</h${level}>`; continue; }
-      // lists
       if (/^\s*[-*]\s+/.test(line)){ html += `<li>${inline(line.replace(/^\s*[-*]\s+/, ''))}</li>`; continue; }
       if (line.trim()===''){ html += '<br/>'; continue; }
       html += `<p>${inline(line)}</p>`;
     }
-    // wrap consecutive lis in ul
     html = html.replace(/(<li>[^<]*<\/li>\s*)+/g, m=>`<ul>${m}</ul>`);
     return html;
   }
   function inline(s){
-    // bold **text**, italic *text*, code `code`, link [text](url)
     s = s.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
     s = s.replace(/\*(.+?)\*/g, '<em>$1</em>');
     s = s.replace(/`([^`]+)`/g, '<code>$1</code>');
